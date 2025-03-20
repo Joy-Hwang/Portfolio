@@ -74,52 +74,42 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 800);
     }
 
-    // Scroll Reveal Animation
-    $(document).ready(function () {
+    // Scroll Reveal Animation (jQuery)
+    function scrollReveal() {
       var $win = $(window),
-        $win_height = $(window).height(),
-        windowPercentage = $(window).height() * 0.9;
+        $win_height = $win.height(),
+        windowPercentage = $win_height * 0.9;
 
-      $win.on("scroll", scrollReveal);
+      var scrolled = $win.scrollTop();
 
-      function scrollReveal() {
-        var scrolled = $win.scrollTop();
+      $(".chartBarsHorizontal .bar").each(function () {
+        var $this = $(this),
+          offsetTop = $this.offset().top;
+        if (
+          scrolled + windowPercentage > offsetTop ||
+          $win_height > offsetTop
+        ) {
+          var percentage = $this.data("percentage");
+          $this.css("width", percentage + "%");
 
-        $(".chartBarsHorizontal .bar").each(function () {
-          var $this = $(this),
-            offsetTop = $this.offset().top;
-          if (
-            scrolled + windowPercentage > offsetTop ||
-            $win_height > offsetTop
-          ) {
-            $(this).each(function (key, bar) {
-              var percentage = $(this).data("percentage");
-              $(this).css("width", percentage + "%");
+          $this.prop("Counter", 0).animate(
+            { Counter: percentage },
+            {
+              duration: 2000,
+              easing: "swing",
+              step: function (now) {
+                $this.text(Math.ceil(now));
+              },
+            }
+          );
+        } else {
+          $this.css("width", 0);
+        }
+      });
+    }
 
-              $(this)
-                .prop("Counter", 0)
-                .animate(
-                  {
-                    Counter: $(this).data("percentage"),
-                  },
-                  {
-                    duration: 2000,
-                    easing: "swing",
-                    step: function (now) {
-                      $(this).text(Math.ceil(now));
-                    },
-                  }
-                );
-            });
-          } else {
-            $(this).each(function (key, bar) {
-              $(this).css("width", 0);
-            });
-          }
-        });
-      }
-      scrollReveal();
-    });
+    $(window).on("scroll", scrollReveal);
+    scrollReveal();
 
     // Tabs
     function initTabs() {
