@@ -9,40 +9,66 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main id="main">
       <header id="header">
-        <h1 class="logo">
-          <a href="#">Joy Hwang</a>
-        </h1>
-        <nav class="nav">
-          <ul class="util_flex">
-            <li class="nav__item">About Me</li>
-            <li class="nav__item">Profile</li>
-            <li class="nav__item">Works</li>
-            <li class="nav__item">Contact</li>
-          </ul>
+        <div class="header__inner util_flex">
+          <h1 class="logo">
+            <a href="#">Joy Hwang</a>
+          </h1>
+          <nav class="nav">
+            <ul class="util_flex">
+              <li class="nav__item">About Me</li>
+              <li class="nav__item">Profile</li>
+              <li class="nav__item">Works</li>
+              <li class="nav__item">Contact</li>
+            </ul>
+        </div>
+        
         </nav>
       </header>
       <!-- s : about -->
       <section class="section section--about">
         <div class="section__inner">
-          <span class="section__title"> About Me </span>
+          <h2 class="section__title">About Me</h2>
           <div class="util_flex">
             <div class="section__img" data-aos="fade-up">
               <img src="" alt="profile" />
             </div>
-            <p class="seciton__desc seciton__desc--point" data-aos="fade-up">
-              I am Joy, a passionate and detail-oriented UI developer.
-            </p>
-            <p class="seciton__desc" data-aos="fade-up">
-              I've been working in the web agnecy for over 4 years, specializing
-              in CSS, JavaScript, and responsive web design. <br />
-              I have experience developing user-friendly, accessible, and
-              SEO-optimized websites.
-            </p>
+            <div class="text-wrap">
+              <div class="introduction">
+                <p class="introduction__title">introduction</p>
+                <p
+                  class="seciton__desc seciton__desc--point"
+                  data-aos="fade-up"
+                >
+                  I am Joy, a passionate and detail-oriented UI developer.
+                </p>
+                <p class="seciton__desc" data-aos="fade-up">
+                  I've been working in the web agnecy for over 4 years,
+                  specializing in HTML, CSS, JavaScript, and responsive web
+                  design. <br />
+                  I have experience developing user-friendly, accessible, and
+                  SEO-optimized websites.
+                </p>
+              </div>
+              <div class="carrers">
+                <p class="carrers__title">CARRERS</p>
+                <span class="carrers__date">2022.03.02 ~ 2025.07.30</span>
+                <p class="carrers__name">CTTD</p>
+                <p class="carrers__desc">Frontend Development</p>
+                <p class="carrers__desc">
+                  E-commerce Platform Development and Management <br />
+                  Tech Stack: SCSS, JavaScript (ES6), jQuery, HTML5/CSS3
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -50,6 +76,8 @@
       <!-- s : skills -->
       <section class="section section--skills">
         <div class="section__inner">
+          <h2 class="section__title">Skills</h2>
+
           <ul class="skills util_flex">
             <li class="skills__list">
               <div
@@ -227,13 +255,188 @@
       <!-- s : works -->
       <section class="section section--works">
         <!-- 카테고리별 탭메뉴 상세페이지/풀페이지/제안/JS 작업(미니게임, 모멘텀 등)/리액트까지 -->
-        <div class="section__inner"></div>
+        <div class="section__inner">
+          <h2 class="section__title">Works</h2>
+
+          <div class="tab">
+            <ul class="tab-nav">
+              <li class="tab-nav__item active" data-tab="tab1">
+                <h3>WORK EXPERIENCE</h3>
+              </li>
+              <li class="tab-nav__item" data-tab="tab2"><h3>PROJECTS</h3></li>
+              <li class="tab-nav__item" data-tab="tab3">
+                <h3>SIDE PROJECTS</h3>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="tab1" class="tab-content__box active"></div>
+              <div id="tab2" class="tab-content__box">
+                <div class="workSwiper">
+                  <ul class="works swiper-wrapper">
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a
+                        href="https://www.laneige.com/kr/ko/brand/meets-art/"
+                        target="_blank"
+                      >
+                        <img
+                          src="./img/project01.png"
+                          alt="Laneige Meets Art Page"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">Laneige Meets Art</h4>
+                        <p class="hover-box__desc">23.02.14</p>
+                        <p class="hover-box__desc">
+                          Brand Event Page Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 100%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js
+                        </p>
+                      </div>
+                    </li>
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a
+                        href="https://www.sulwhasoo.com/kr/ko/gift/packing-service.html"
+                        target="_blank"
+                      >
+                        <img
+                          src="./img/project02.png"
+                          alt="Sulwhasoo Gift Page"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">SULWHASOO GIFT</h4>
+                        <p class="hover-box__desc">23.10.01</p>
+                        <p class="hover-box__desc">
+                          Brand Event Page Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 100%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js
+                        </p>
+                      </div>
+                    </li>
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a
+                        href="https://www.hera.com/kr/ko/hera-story/library/rouge-classy-story.html"
+                        target="_blank"
+                      >
+                        <img
+                          src="./img/project03.png"
+                          alt="Hera Rouge Classy Story Page"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">HERA ROUGE CLASSY</h4>
+                        <p class="hover-box__desc">23.12.20</p>
+                        <p class="hover-box__desc">
+                          Brand Event Page Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 100%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js
+                        </p>
+                      </div>
+                    </li>
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a
+                        href="https://www.samsungebiz.com/event/galaxycampus/gcseventhub/"
+                        target="_blank"
+                      >
+                        <img
+                          src="./img/project04.png"
+                          alt="Samsung Galaxy Campus Event Page"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">SAMSUNG GALAXY CAMPUS</h4>
+                        <p class="hover-box__desc">24.04.01 ~ 25.07.30</p>
+                        <p class="hover-box__desc">
+                          Samsung Galaxy Campus Event Page Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 100%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js
+                        </p>
+                      </div>
+                    </li>
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a href="https://www.sikorea.co.kr/main" target="_blank">
+                        <img
+                          src="./img/project04.png"
+                          alt="Shinsegae International Homepage"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">
+                          Shinsegae International Homepage
+                        </h4>
+                        <p class="hover-box__desc">23.09.14</p>
+                        <p class="hover-box__desc">
+                          Shinsegae International Website Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 40%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js 11tydata
+                        </p>
+                      </div>
+                    </li>
+                    <li class="works__item swiper-slide" data-aos="fade-up">
+                      <a
+                        href="https://review.cttd.co.kr/ptk/2024/0321/pc/b/"
+                        target="_blank"
+                      >
+                        <img
+                          src="./img/project04.png"
+                          alt="Samsung Galaxy Campus Event Page"
+                        />
+                      </a>
+                      <div class="hover-box">
+                        <h4 class="hover-box__title">PTK Event Page</h4>
+                        <p class="hover-box__desc">24.03.21</p>
+                        <p class="hover-box__desc">
+                          PTK Event Page Development
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Contribution</span>: 100%
+                        </p>
+                        <p class="hover-box__desc">
+                          <span class="text-point">Tech Stack</span>: html css
+                          js 11tydata
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div id="tab3" class="tab-content__box"></div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- e : works -->
       <!-- s : contact -->
       <section class="section section--contact">
         <!-- 블로그, 깃허브,  -->
         <div class="section__inner">
+          <h2 class="section__title">Contact</h2>
           <div class="text-wrap">
             <p class="section__title">Looking for a skilled Web Publisher?</p>
             <p class="section__desc">
@@ -243,7 +446,8 @@
           <ul class="contact-info">
             <li class="contact-info__item">
               <a href="">Github</a>
-              <a href="">email</a>
+              <a href="">Tistory</a>
+              <a href="">Email</a>
             </li>
           </ul>
         </div>
@@ -253,6 +457,7 @@
     <footer id="footer">
       <p class="footer-txt">Copyright © 2025 Joy Hwang</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./script.js"></script>
