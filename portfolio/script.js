@@ -40,7 +40,10 @@ function initNav() {
     });
 
     navLinkEls.forEach((navLinkEl) => {
-      navLinkEl.classList.toggle("active", navLinkEl.hash === `#${currentSection}`);
+      navLinkEl.classList.toggle(
+        "active",
+        navLinkEl.hash === `#${currentSection}`
+      );
     });
   });
 }
@@ -181,10 +184,11 @@ function initTabs() {
 
 // ⭐ 7. Swiper 슬라이드 초기화
 function initSwiper() {
-  new Swiper(".workSwiper", {
+  new Swiper(".projectSwiper", {
     pagination: {
       el: ".swiper-pagination",
     },
+    slidesPerView: "auto",
   });
 }
 
