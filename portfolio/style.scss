@@ -50,16 +50,6 @@ img {
   display: grid;
 }
 
-.section {
-  width: 100%;
-  height: 100vh;
-  padding-block: 120px;
-  &__inner {
-    width: 1280px;
-    margin: 0 auto;
-  }
-}
-
 header {
   width: 100%;
   height: 80px;
@@ -120,7 +110,70 @@ header {
     }
   }
 }
+.section {
+  width: 100%;
+  height: 100vh;
+  padding-block: 20vh;
+  &__inner {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    margin-bottom: 4.6875%;
+    position: relative;
 
+    &::before {
+      content: "";
+      width: 0;
+      height: 50%;
+      background-color: #fff6b3;
+      position: absolute;
+      left: -3%;
+      bottom: 0;
+      z-index: -1;
+      transition: width 0.5s ease-in-out;
+    }
+    &.aos-animate {
+      &::before {
+        animation: highlight 0.5s forwards ease-in-out;
+      }
+    }
+  }
+  &__desc {
+    font-size: 2.5rem;
+    line-height: 1.125rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* about */
+.section--about {
+  .util_flex {
+    gap: 10%;
+  }
+  .section__img {
+    width: 25%;
+    flex: 0 0 auto;
+    > img {
+      filter: blur(4px);
+      transition: all 2s ease-in-out;
+    }
+    &.aos-animate {
+      > img {
+        filter: blur(0);
+      }
+    }
+  }
+  .text-wrap {
+    flex: 1;
+  }
+}
 /* bars */
 .chartBarsWrap.chartBarsHorizontal {
   flex-direction: column;
@@ -291,3 +344,14 @@ $color_list: (#e4f6c3, #bedeff, #ffe2a1, #fcffa5, #d9dfff);
 //   align-items: center;
 //   justify-content: center;
 // }
+
+/* keyframes */
+
+@keyframes highlight {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
+}
