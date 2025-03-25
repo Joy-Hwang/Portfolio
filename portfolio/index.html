@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <!-- <link rel="icon" href="/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Joy Hwang : UI Developer Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://www.unpkg.com/fullpage.js/dist/fullpage.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -14,7 +19,6 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <main id="main">
@@ -26,7 +30,7 @@
           <nav class="nav">
             <ul class="util_flex">
               <li class="nav__item active">
-                <a href="#about" class="nav__link">About Me</a>
+                <a href="#about" class="nav__link">About</a>
               </li>
               <li class="nav__item active">
                 <a href="#skills" class="nav__link">Skills</a>
@@ -41,71 +45,77 @@
           </nav>
         </div>
       </header>
-      <!-- s : kv -->
-      <div class="kv"></div>
-      <!-- s : about -->
-      <section id="about" class="section section--about">
-        <div class="section__inner">
-          <h2 class="section__title" data-aos="fade-up">About Me</h2>
-          <div class="util_flex">
-            <div class="section__img" data-aos="fade-up">
-              <img src="./img/profile.png" alt="profile" />
-            </div>
-            <div class="text-wrap">
-              <div class="content content--intro">
-                <h3 class="content__title" data-aos="fade-up">Introduction</h3>
-                <br />
-                <p class="section__desc intro-point" data-aos="fade-up">
-                  I am Joy, a passionate and detail-oriented UI developer.
-                </p>
-                <p
-                  class="section__desc"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  I have been working at a web agency in South Korea for over
-                  four years,<br />
-                  specializing in HTML, CSS, JavaScript, and responsive web
-                  design.
-                </p>
-                <p
-                  class="section__desc"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  I have experience in developing user-friendly, accessible,<br />
-                  and SEO-optimized websites.
-                </p>
+      <div id="fullpage">
+        <!-- s : kv -->
+        <section class="section section--kv">
+          <div class="section__inner"></div>
+        </section>
+        <!-- s : about -->
+        <section id="about" class="section section--about">
+          <div class="section__inner">
+            <h2 class="section__title" data-aos="fade-up">About Me</h2>
+            <div class="util_flex">
+              <div class="section__img" data-aos="fade-up">
+                <img src="./img/profile.png" alt="profile" />
               </div>
-              <div class="content content--career">
-                <h3
-                  class="content__title"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  Career
-                </h3>
-                <div data-aos="fade-up" data-aos-delay="300">
-                  <p class="about-desc about-desc--large">CTTD</p>
-                  <span class="about-desc">2022.03.02 ~ 2025.07.30</span>
+              <div class="text-wrap">
+                <div class="content content--intro">
+                  <h3 class="content__title" data-aos="fade-up">
+                    Introduction
+                  </h3>
+                  <br />
+                  <p class="section__desc intro-point" data-aos="fade-up">
+                    I am Joy, a passionate and detail-oriented UI developer.
+                  </p>
+                  <p
+                    class="section__desc"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    I have been working at a web agency in South Korea for over
+                    four years,<br />
+                    specializing in HTML, CSS, JavaScript, and responsive web
+                    design.
+                  </p>
+                  <p
+                    class="section__desc"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    I have experience in developing user-friendly,
+                    accessible,<br />
+                    and SEO-optimized websites.
+                  </p>
                 </div>
-                <p
-                  class="section__desc section__desc--point"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  Frontend Development / Junior Developer
-                </p>
-                <p
-                  class="section__desc"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  E-commerce Platform Development and Management <br />
-                  Tech Stack: SCSS, JavaScript (ES6), jQuery, HTML5/CSS3
-                </p>
-              </div>
-              <!-- <div class="content content--edu">
+                <div class="content content--career">
+                  <h3
+                    class="content__title"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    Career
+                  </h3>
+                  <div data-aos="fade-up" data-aos-delay="300">
+                    <p class="about-desc about-desc--large">CTTD</p>
+                    <span class="about-desc">2022.03.02 ~ 2025.07.30</span>
+                  </div>
+                  <p
+                    class="section__desc section__desc--point"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    Frontend Development / Junior Developer
+                  </p>
+                  <p
+                    class="section__desc"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    E-commerce Platform Development and Management <br />
+                    Tech Stack: SCSS, JavaScript (ES6), jQuery, HTML5/CSS3
+                  </p>
+                </div>
+                <!-- <div class="content content--edu">
                 <h3
                   class="content__title"
                   data-aos="fade-up"
@@ -126,445 +136,477 @@
                   History / Bachelor's Degree
                 </p>
               </div> -->
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- e : about -->
-      <!-- s : skills -->
-      <section id="skills" class="section section--skills">
-        <div class="section__inner">
-          <h2 class="section__title" data-aos="fade-up">Skills</h2>
+        </section>
+        <!-- e : about -->
+        <!-- s : skills -->
+        <section id="skills" class="section section--skills">
+          <div class="section__inner">
+            <h2 class="section__title" data-aos="fade-up">Skills</h2>
 
-          <ul class="skills util_grid">
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/html5_icon.webp" alt="html5" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="97" class="bar greenBarFlat"></div>
+            <ul class="skills util_grid">
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/html5_icon.webp" alt="html5" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="97" class="bar greenBarFlat"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/css3_icon.webp" alt="css" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="95" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/javascript_icon.webp" alt="JS" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="85" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/jquery_icon.png" alt="Jquery" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="85" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/photoshop_icon.png" alt="photoshop" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="95" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/xd_icon.png" alt="xd" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="95" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/figma_icon.png" alt="figma" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="85" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/zeplin_icon.png" alt="zeplin" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="85" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/github_icon.png" alt="github" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="95" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="skills__list">
-              <div class="skills__img" data-aos="fade-up">
-                <img src="./img/svn_icon.png" alt="svn" />
-              </div>
-              <div class="chartBarsHorizontal">
-                <div class="chartBars">
-                  <div class="bars">
-                    <div data-percentage="95" class="bar blueBarFlat"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- e : skills -->
-      <!-- s : work -->
-      <section id="work" class="section section--work">
-        <!-- 카테고리별 탭메뉴 상세페이지/풀페이지/제안/JS 작업(미니게임, 모멘텀 등)/리액트까지 -->
-        <div class="section__inner">
-          <h2 class="section__title" data-aos="fade-up">work</h2>
-
-          <div class="tab" data-aos="fade-up">
-            <ul class="tab-nav">
-              <li class="tab-nav__item active" data-tab="tab1">
-                <h3 class="tab-nav__title">WORK EXPERIENCES</h3>
               </li>
-              <li class="tab-nav__item" data-tab="tab2">
-                <h3 class="tab-nav__title">PROJECTS</h3>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/css3_icon.webp" alt="css" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="95" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="tab-nav__item" data-tab="tab3">
-                <h3 class="tab-nav__title">SIDE PROJECTS</h3>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/javascript_icon.webp" alt="JS" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="85" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/jquery_icon.png" alt="Jquery" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="85" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/photoshop_icon.png" alt="photoshop" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="95" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/xd_icon.png" alt="xd" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="95" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/figma_icon.png" alt="figma" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="85" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/zeplin_icon.png" alt="zeplin" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="85" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/github_icon.png" alt="github" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="95" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__list">
+                <div class="skills__img" data-aos="fade-up">
+                  <img src="./img/svn_icon.png" alt="svn" />
+                </div>
+                <div class="chartBarsHorizontal">
+                  <div class="chartBars">
+                    <div class="bars">
+                      <div data-percentage="95" class="bar blueBarFlat"></div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
-            <div class="tab-content">
-              <div
-                id="tab1"
-                class="tab-content__box tab-content__box--experience active"
-              >
-                <div class="util_flex">
-                  <div class="experience-info">
-                    <p class="experience-title">
-                      CTTD<span class="experience-title-point"
-                        >Amorepacific Team</span
-                      >
-                    </p>
-                    <p class="experience-date">2022.03.02 ~ 2024.03.31</p>
-                  </div>
-                  <ul class="experience-detail">
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Brand Mall Development & Management</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Built and maintained brand e-commerce platforms.
-                        </li>
-                        <li class="experience-detail__desc">
-                          Managed Shopify & Magento development environment.
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Development & Implementation</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Developed full-page and detailed pages through
-                          hard-coded solutions.
-                        </li>
-                        <li class="experience-detail__desc">
-                          Ensured responsive design across various devices.
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Technical Environment</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Version control and collaboration using GitHub.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="util_flex">
-                  <div class="experience-info">
-                    <p class="experience-title">
-                      CTTD<span class="experience-title-point">PTK Team</span>
-                    </p>
-                    <p class="experience-date">2024.04.01 ~ 2025.07.30</p>
-                  </div>
-                  <ul class="experience-detail">
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Galaxy Campus Management on Samsung.com</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Developed and maintained event pages for Galaxy
-                          Campus.
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Development & Implementation</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Created responsive event pages through hard-coded
-                          solutions.
-                        </li>
-                        <li class="experience-detail__desc">
-                          Optimized performance and usability for seamless user
-                          experience.
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="experience-detail__item">
-                      <span class="experience-detail__title">
-                        Technical Environment</span
-                      >
-                      <ul>
-                        <li class="experience-detail__desc">
-                          Worked with Gulp for task automation and SVN for
-                          version control.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="tab2" class="tab-content__box tab-content__box--project">
-                <div class="projectSwiper">
-                  <ul class="project swiper-wrapper">
-                    <li class="project__item swiper-slide" data-aos="fade-up">
-                      <a
-                        href="https://www.laneige.com/kr/ko/brand/meets-art/"
-                        target="_blank"
-                        class="project__link"
-                      >
-                        <div class="project__thumb">
-                          <img
-                            src="./img/project01.png"
-                            alt="Laneige Meets Art Page"
-                          />
-                        </div>
-                        <div class="hover-box">
-                          <h4 class="hover-box__title">Laneige Meets Art</h4>
-                          <p class="hover-box__desc">
-                            Brand Event Page Development
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Contribution</span>: 100%
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Tech Stack</span>: html css
-                            js
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="project__item swiper-slide" data-aos="fade-up">
-                      <a
-                        href="https://www.sulwhasoo.com/kr/ko/gift/packing-service.html"
-                        target="_blank"
-                        class="project__link"
-                      >
-                        <div class="project__thumb">
-                          <img
-                            src="./img/project02.png"
-                            alt="Sulwhasoo Gift Page"
-                          />
-                        </div>
+          </div>
+        </section>
+        <!-- e : skills -->
+        <!-- s : work -->
+        <section id="work" class="section section--work">
+          <!-- 카테고리별 탭메뉴 상세페이지/풀페이지/제안/JS 작업(미니게임, 모멘텀 등)/리액트까지 -->
+          <div class="section__inner">
+            <h2 class="section__title" data-aos="fade-up">work</h2>
 
-                        <div class="hover-box">
-                          <h4 class="hover-box__title">Sulwhasoo Gift</h4>
-                          <p class="hover-box__desc">
-                            Brand Event Page Development
+            <div class="tab" data-aos="fade-up">
+              <ul class="tab-nav">
+                <li class="tab-nav__item active" data-tab="tab1">
+                  <h3 class="tab-nav__title">WORK EXPERIENCES</h3>
+                </li>
+                <li class="tab-nav__item" data-tab="tab2">
+                  <h3 class="tab-nav__title">PROJECTS</h3>
+                </li>
+                <li class="tab-nav__item" data-tab="tab3">
+                  <h3 class="tab-nav__title">SIDE PROJECTS</h3>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div
+                  id="tab1"
+                  class="tab-content__box tab-content__box--experience active"
+                >
+                  <div class="experienceSwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="experience-info">
+                          <p class="experience-title">
+                            CTTD<span class="experience-title-point"
+                              >Amorepacific <br />
+                              Team</span
+                            >
                           </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Contribution</span>: 100%
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Tech Stack</span>: html css
-                            js
-                          </p>
+                          <p class="experience-date">2022.03.02 ~ 2024.03.31</p>
                         </div>
-                      </a>
-                    </li>
-                    <li class="project__item swiper-slide" data-aos="fade-up">
-                      <a
-                        href="https://www.hera.com/kr/ko/hera-story/library/rouge-classy-story.html"
-                        target="_blank"
-                        class="project__link"
-                      >
-                        <div class="project__thumb">
-                          <img
-                            src="./img/project03.png"
-                            alt="Hera Rouge Classy Story Page"
-                          />
+                        <ul class="experience-detail">
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Brand Mall Development & Management</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Built and maintained brand e-commerce platforms.
+                              </li>
+                              <li class="experience-detail__desc">
+                                Managed Shopify & Magento development
+                                environment.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Development & Implementation</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Developed full-page and detailed pages through
+                                hard-coded solutions.
+                              </li>
+                              <li class="experience-detail__desc">
+                                Ensured responsive design across various
+                                devices.
+                              </li>
+                              <li class="experience-detail__desc">
+                                Optimized the website for SEO and web
+                                accessibility.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Technical Environment</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Version control and collaboration using GitHub.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="experience-info">
+                          <p class="experience-title">
+                            CTTD<span class="experience-title-point"
+                              >PTK Team</span
+                            >
+                          </p>
+                          <p class="experience-date">2024.04.01 ~ 2025.07.30</p>
                         </div>
-                        <div class="hover-box">
-                          <h4 class="hover-box__title">Hera Rouge Classy</h4>
-                          <p class="hover-box__desc">
-                            Brand Event Page Development
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Contribution</span>: 100%
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Tech Stack</span>: html css
-                            js
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="project__item swiper-slide" data-aos="fade-up">
-                      <a
-                        href="https://www.samsungebiz.com/event/galaxycampus/gcseventhub/"
-                        target="_blank"
-                        class="project__link"
-                      >
-                        <div class="project__thumb">
-                          <img
-                            src="./img/project04.png"
-                            alt="Samsung Galaxy Campus Event Page"
-                          />
-                        </div>
-                        <div class="hover-box">
-                          <h4 class="hover-box__title">
-                            Samsung Galaxy Campus
-                          </h4>
-                          <p class="hover-box__desc">
-                            Samsung Galaxy Campus Event Page Development
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Contribution</span>: 100%
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Tech Stack</span>: html css
-                            js
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="project__item swiper-slide" data-aos="fade-up">
-                      <a
-                        href="https://www.sikorea.co.kr/main"
-                        target="_blank"
-                        class="project__link"
-                      >
-                        <div class="project__thumb">
-                          <img
-                            src="./img/project05.png"
-                            alt="Shinsegae International Homepage"
-                          />
-                        </div>
-                        <div class="hover-box">
-                          <h4 class="hover-box__title">
-                            Shinsegae International
-                          </h4>
-                          <p class="hover-box__desc">
-                            Shinsegae International Website Development
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Contribution</span>: 40%
-                          </p>
-                          <p class="hover-box__desc">
-                            <span class="text-point">Tech Stack</span>: html css
-                            js 11tydata
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="swiper-pagination"></div>
+                        <ul class="experience-detail">
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Galaxy Campus Management on Samsung.com</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Developed and maintained event pages for Galaxy
+                                Campus.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Development & Implementation</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Created responsive event pages through
+                                hard-coded solutions.
+                              </li>
+                              <li class="experience-detail__desc">
+                                Optimized performance and usability for seamless
+                                user experience.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="experience-detail__item">
+                            <span class="experience-detail__title">
+                              Technical Environment</span
+                            >
+                            <ul>
+                              <li class="experience-detail__desc">
+                                Worked with Gulp for task automation and SVN for
+                                version control.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div
+                  id="tab2"
+                  class="tab-content__box tab-content__box--project"
+                >
+                  <div class="projectSwiper">
+                    <ul class="project swiper-wrapper">
+                      <li class="project__item swiper-slide" data-aos="fade-up">
+                        <a
+                          href="https://www.laneige.com/kr/ko/brand/meets-art/"
+                          target="_blank"
+                          class="project__link"
+                        >
+                          <div class="project__thumb">
+                            <img
+                              src="./img/project01.png"
+                              alt="Laneige Meets Art Page"
+                            />
+                          </div>
+                          <div class="hover-box">
+                            <h4 class="hover-box__title">Laneige Meets Art</h4>
+                            <p class="hover-box__desc">
+                              Brand Event Page Development
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Contribution</span>: 100%
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Tech Stack</span>: html
+                              css js
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project__item swiper-slide" data-aos="fade-up">
+                        <a
+                          href="https://www.sulwhasoo.com/kr/ko/gift/packing-service.html"
+                          target="_blank"
+                          class="project__link"
+                        >
+                          <div class="project__thumb">
+                            <img
+                              src="./img/project02.png"
+                              alt="Sulwhasoo Gift Page"
+                            />
+                          </div>
+
+                          <div class="hover-box">
+                            <h4 class="hover-box__title">Sulwhasoo Gift</h4>
+                            <p class="hover-box__desc">
+                              Brand Event Page Development
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Contribution</span>: 100%
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Tech Stack</span>: html
+                              css js
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project__item swiper-slide" data-aos="fade-up">
+                        <a
+                          href="https://www.hera.com/kr/ko/hera-story/library/rouge-classy-story.html"
+                          target="_blank"
+                          class="project__link"
+                        >
+                          <div class="project__thumb">
+                            <img
+                              src="./img/project03.png"
+                              alt="Hera Rouge Classy Story Page"
+                            />
+                          </div>
+                          <div class="hover-box">
+                            <h4 class="hover-box__title">Hera Rouge Classy</h4>
+                            <p class="hover-box__desc">
+                              Brand Event Page Development
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Contribution</span>: 100%
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Tech Stack</span>: html
+                              css js
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project__item swiper-slide" data-aos="fade-up">
+                        <a
+                          href="https://www.samsungebiz.com/event/galaxycampus/gcseventhub/"
+                          target="_blank"
+                          class="project__link"
+                        >
+                          <div class="project__thumb">
+                            <img
+                              src="./img/project04.png"
+                              alt="Samsung Galaxy Campus Event Page"
+                            />
+                          </div>
+                          <div class="hover-box">
+                            <h4 class="hover-box__title">
+                              Samsung Galaxy Campus
+                            </h4>
+                            <p class="hover-box__desc">
+                              Samsung Galaxy Campus Event Page Development
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Contribution</span>: 100%
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Tech Stack</span>: html
+                              css js
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project__item swiper-slide" data-aos="fade-up">
+                        <a
+                          href="https://www.sikorea.co.kr/main"
+                          target="_blank"
+                          class="project__link"
+                        >
+                          <div class="project__thumb">
+                            <img
+                              src="./img/project05.png"
+                              alt="Shinsegae International Homepage"
+                            />
+                          </div>
+                          <div class="hover-box">
+                            <h4 class="hover-box__title">
+                              Shinsegae International
+                            </h4>
+                            <p class="hover-box__desc">
+                              Shinsegae International Website Development
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Contribution</span>: 40%
+                            </p>
+                            <p class="hover-box__desc">
+                              <span class="text-point">Tech Stack</span>: html
+                              css js 11tydata
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div id="tab3" class="tab-content__box tab-content__box--side">
+                  <div class="btn-wrap">
+                    <a
+                      href="https://github.com/Joy-Hwang/projects"
+                      class="side_btn"
+                      target="_blank"
+                      title="Go to Github"
+                    >
+                      View More Info →
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div
-                id="tab3"
-                class="tab-content__box tab-content__box--side"
-              ></div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- e : work -->
-      <!-- s : contact -->
-      <section id="contact" class="section section--contact">
-        <!-- 블로그, 깃허브,  -->
-        <div class="section__inner">
-          <h2 class="section__title" data-aos="fade-up">Contact</h2>
-          <div class="text-wrap">
-            <p class="section__desc">Looking for a skilled Web Publisher?</p>
-            <p class="section__desc">
-              I am open to job opportunities and collaborations. Let’s connect!
-            </p>
+        </section>
+        <!-- e : work -->
+        <!-- s : contact -->
+        <section id="contact" class="section section--contact">
+          <!-- 블로그, 깃허브,  -->
+          <div class="section__inner">
+            <h2 class="section__title" data-aos="fade-up">Contact</h2>
+            <div class="text-wrap">
+              <p class="section__desc">Looking for a skilled Web Publisher?</p>
+              <p class="section__desc">
+                I am open to job opportunities and collaborations. Let’s
+                connect!
+              </p>
+            </div>
+            <ul class="contact-info">
+              <li class="contact-info__item">
+                <a href="">Github</a>
+                <a href="">Tistory</a>
+                <a href="">Email</a>
+              </li>
+            </ul>
+            <footer id="footer">
+              <p class="footer-txt">Copyright © 2025 Joy Hwang</p>
+            </footer>
           </div>
-          <ul class="contact-info">
-            <li class="contact-info__item">
-              <a href="">Github</a>
-              <a href="">Tistory</a>
-              <a href="">Email</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- e : contact -->
+        </section>
+        <!-- e : contact -->
+      </div>
     </main>
-    <footer id="footer">
-      <p class="footer-txt">Copyright © 2025 Joy Hwang</p>
-    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="./script.js"></script>
   </body>
 </html>
