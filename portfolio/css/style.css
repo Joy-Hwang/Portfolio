@@ -178,6 +178,9 @@ header.on {
   position: relative;
   z-index: 1;
 }
+.section--kv .section__desc {
+  font-size: 20px;
+}
 
 /* about */
 .section--about .util_flex {

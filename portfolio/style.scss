@@ -181,6 +181,9 @@ header {
   background-size: 300% 300%;
   position: relative;
   z-index: 1;
+  .section__desc {
+    font-size: 20px;
+  }
 }
 /* about */
 .section--about {
