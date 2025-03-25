@@ -8,6 +8,7 @@
   padding: 0;
   color: #171717;
 }
+
 :root {
   --swiper-theme-color: transparent;
 }
@@ -120,7 +121,10 @@ header {
 }
 .section {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &__inner {
     max-width: 1320px;
     width: 100%;
@@ -168,15 +172,13 @@ header {
   width: 100%;
   background: linear-gradient(
     -130deg,
-    #0671e0 0,
-    #1c8bfe 23%,
-    #48b3af 50%,
-    #1c8bfe 73%,
-    #0671e0 100%
+    #f7cfd8 0,
+    #f4f8d3 23%,
+    #a6f1e0 73%,
+    #73c7c7 100%
   );
   animation: gradient 20s linear infinite;
   background-size: 300% 300%;
-  height: 920px;
   position: relative;
   z-index: 1;
 }
@@ -286,8 +288,8 @@ header {
       -webkit-transition: 2s width cubic-bezier(0.6, 0.4, 0.4, 1.1);
       transition: 2s width cubic-bezier(0.6, 0.4, 0.4, 1.1);
       color: #fff;
-      background: linear-gradient(90deg, #304352, #d7d2cc);
-      // background: linear-gradient(90deg, #70e1f5, #ffd194);
+      // background: linear-gradient(90deg, #c2e59c, #64b3f4);
+      background: linear-gradient(90deg, #f4f8d3, #73c7c7);
       &:after {
         content: "%";
         font-size: 1rem;
@@ -320,7 +322,7 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative;
-    background-color: #e5f3e3;
+    background-color: #ffead0;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     transform: all 0.2s;
 
@@ -330,7 +332,7 @@ header {
       }
     }
     &.active {
-      box-shadow: rgb(216, 216, 216) 3px 3px 6px 0px inset,
+      box-shadow: rgb(233, 215, 183) 3px 3px 6px 0px inset,
         rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
       .tab-nav__title {
         color: rgb(23, 23, 23);
@@ -371,7 +373,7 @@ header {
   font-weight: 500;
   display: block;
   margin-top: 10px;
-  color: #3b6790;
+  color: #4d91d1;
 }
 .experience-date {
   font-size: 1rem;

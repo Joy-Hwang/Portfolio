@@ -1,11 +1,15 @@
 function initApp() {
+  AOS.init({
+    offset: 100,
+    delay: 0,
+    duration: 600,
+  });
   initHeaderScroll();
   initNav();
   initSmoothScroll();
   initProgressBar();
   initTabs();
   initSwiper();
-  initFullpage();
 }
 
 // ⭐ 1. 헤더 스크롤 시 스타일 변경
@@ -130,14 +134,6 @@ function initSwiper() {
       el: ".swiper-pagination",
     },
     slidesPerView: "auto",
-  });
-}
-
-// ⭐ 7. fullpage 초기화
-function initFullpage() {
-  $("#fullpage").fullpage({
-    autoScrolling: true,
-    navigation: true,
   });
 }
 

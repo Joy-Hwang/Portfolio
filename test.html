@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOS 테스트</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <style>
+      .content {
+        height: 1500px; /* 예시 높이 */
+      }
+      [data-aos^="fade"] {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      [data-aos^="fade"].aos-animate {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div data-aos="fade" style="height: 500px">스크롤 내려서 확인하세요!</div>
+      <div data-aos="fade" style="height: 500px">두 번째 섹션</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          offset: 100, // 애니메이션 시작을 위한 오프셋 설정
+          delay: 0, // 애니메이션 지연 시간
+          duration: 600, // 애니메이션 지속 시간
+          easing: "ease-in-out", // 애니메이션 이징 설정
+          once: true, // 애니메이션을 한 번만 실행
+        });
+      });
+    </script>
+  </body>
+</html>
