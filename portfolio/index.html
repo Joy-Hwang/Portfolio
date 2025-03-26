@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Joy Hwang : UI Developer Portfolio</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css"
     />
     <link
       rel="stylesheet"
@@ -24,12 +28,13 @@
           <h1 class="logo">
             <a href="#">Joy Hwang</a>
           </h1>
-          <nav class="nav">
+
+          <!-- <nav class="nav">
             <ul class="util_flex">
               <li class="nav__item active">
                 <a href="#about" class="nav__link">About</a>
               </li>
-              <li class="nav__item active">
+              <li class="nav__item">
                 <a href="#skills" class="nav__link">Skills</a>
               </li>
               <li class="nav__item">
@@ -39,21 +44,23 @@
                 <a href="#contact" class="nav__link">Contact</a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
       </header>
-      <div id="my-scrollbar">
+      <div id="fullpage">
         <!-- s : kv -->
         <section class="section section--kv">
           <div class="section__inner">
-            <p class="section__title">Welcome to my portfolio</p>
-            <p class="section__desc">
+            <p class="kv-title">Welcome to my portfolio</p>
+            <p class="kv-desc">
               Hello, I’m Joy Hwang, a UI developer with 4 years of experience.
               <br />
+            </p>
+            <p class="kv-desc">
               I thrive on joyful collaboration and excel at creating
               user-friendly, engaging web experiences. <br />
               With a deep understanding of user needs, <br />
-              I design and develop intuitive interfaces that are both <br />
+              I design and develop intuitive interfaces that are both
               aesthetically pleasing and highly functional.
             </p>
           </div>
@@ -283,7 +290,7 @@
         <section id="work" class="section section--work">
           <!-- 카테고리별 탭메뉴 상세페이지/풀페이지/제안/JS 작업(미니게임, 모멘텀 등)/리액트까지 -->
           <div class="section__inner">
-            <h2 class="section__title" data-aos="fade-up">work</h2>
+            <h2 class="section__title" data-aos="fade-up">works</h2>
 
             <div class="tab" data-aos="fade-up">
               <ul class="tab-nav">
@@ -308,8 +315,7 @@
                         <div class="experience-info">
                           <p class="experience-title">
                             CTTD<span class="experience-title-point"
-                              >Amorepacific <br />
-                              Team</span
+                              >Amorepacific Team</span
                             >
                           </p>
                           <p class="experience-date">2022.03.02 ~ 2024.03.31</p>
@@ -610,7 +616,8 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>

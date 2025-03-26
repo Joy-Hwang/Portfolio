@@ -1,105 +1,59 @@
 function initApp() {
-  AOS.init({
-    offset: 100,
-    delay: 0,
-    duration: 600,
-  });
-  initHeaderScroll();
-  initNav();
-  initSmoothScroll();
-  initProgressBar();
+  modiFullpage();
   initTabs();
   initSwiper();
 }
 
-// ⭐ 1. 헤더 스크롤 시 스타일 변경
-function initHeaderScroll() {
-  const header = document.getElementById("header");
-
-  window.addEventListener("scroll", function () {
-    header.classList.toggle("on", window.scrollY > 50);
+function modiFullpage() {
+  $("#fullpage").fullpage({
+    autoScrolling: true,
+    navigation: true,
+    navigationPosition: "right",
+    navigationTooltips: ["Home", "About", "Skills", "Works", "Contact"],
+    touchSensitivity: 15, // 터치 민감도 조정 (0~100)
+    responsiveWidth: 1200, // 특정 너비 이상에서만 fullpage.js 사용
+    responsiveHeight: 700, // 특정 높이 이상에서만 fullpage.js 사용
+    afterRender: function () {
+      $(".logo a").on("click", function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveTo(1); // 첫 번째 섹션으로 이동
+        $("body").addClass("fp-viewing-0");
+      });
+    },
+    // afterLoad 이벤트: 섹션이 로드되면 실행
+    afterLoad: function (anchorLink, index) {
+      // 섹션이 3번째 (index 3)일 때만 애니메이션 실행 (예: .section--skills)
+      if (index === 3) {
+        revealBars();
+      }
+    },
   });
 }
 
-// ⭐ 2. 네비게이션 활성화 기능
-function initNav() {
-  const navLinkEls = document.querySelectorAll(".nav__link");
-  const sectionEls = document.querySelectorAll(".section");
-  let currentSection = "about";
+function revealBars() {
+  $(".chartBarsHorizontal .bar").each(function () {
+    var $this = $(this);
+    if ($this.data("animated")) return;
+    var percentage = $this.data("percentage");
+    $this.css("width", percentage + "%");
 
-  window.addEventListener("scroll", () => {
-    sectionEls.forEach((sectionEl) => {
-      if (window.scrollY >= sectionEl.offsetTop - sectionEl.clientHeight / 3) {
-        currentSection = sectionEl.id;
+    $this.prop("Counter", 0).animate(
+      { Counter: percentage },
+      {
+        duration: 2000,
+        easing: "swing",
+        step: function (now) {
+          $this.text(Math.ceil(now));
+        },
+        complete: function () {
+          // 애니메이션 완료 후 data-animated 속성을 추가
+          $this.data("animated", true);
+        },
       }
-    });
-
-    navLinkEls.forEach((navLinkEl) => {
-      navLinkEl.classList.toggle(
-        "active",
-        navLinkEl.hash === `#${currentSection}`
-      );
-    });
+    );
   });
 }
 
-// ⭐ 3. 네비게이션 클릭 시 부드러운 이동 적용
-function initSmoothScroll() {
-  document.documentElement.style.scrollBehavior = "smooth";
-
-  document.querySelectorAll(".nav__link").forEach((navLinkEl) => {
-    navLinkEl.addEventListener("click", (event) => {
-      event.preventDefault();
-      const targetId = navLinkEl.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth",
-        });
-      }
-    });
-  });
-}
-
-// ⭐ 4. 프로그레스 바 애니메이션 (jQuery 필요)
-function initProgressBar() {
-  function scrollReveal() {
-    var $win = $(window),
-      $win_height = $win.height(),
-      windowPercentage = $win_height * 0.9;
-
-    var scrolled = $win.scrollTop();
-
-    $(".chartBarsHorizontal .bar").each(function () {
-      var $this = $(this),
-        offsetTop = $this.offset().top;
-      if (scrolled + windowPercentage > offsetTop || $win_height > offsetTop) {
-        var percentage = $this.data("percentage");
-        $this.css("width", percentage + "%");
-
-        $this.prop("Counter", 0).animate(
-          { Counter: percentage },
-          {
-            duration: 2000,
-            easing: "swing",
-            step: function (now) {
-              $this.text(Math.ceil(now));
-            },
-          }
-        );
-      } else {
-        $this.css("width", 0);
-      }
-    });
-  }
-
-  $(window).on("scroll", scrollReveal);
-  scrollReveal();
-}
-
-// ⭐ 5. 탭 기능 초기화
 function initTabs() {
   const tabNavItems = document.querySelectorAll(".tab-nav__item");
   const tabContentBoxes = document.querySelectorAll(".tab-content__box");
@@ -120,22 +74,21 @@ function initTabs() {
   });
 }
 
-// ⭐ 6. Swiper 슬라이드 초기화
 function initSwiper() {
   new Swiper(".experienceSwiper", {
-    allowTouchMove: true,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     slidesPerView: "auto",
   });
   new Swiper(".projectSwiper", {
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     slidesPerView: "auto",
   });
 }
 
-// 🚀 앱 초기화 실행
 initApp();

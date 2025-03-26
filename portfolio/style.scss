@@ -53,7 +53,15 @@ img {
 .util_grid {
   display: grid;
 }
-
+#fp-nav ul li .fp-tooltip {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  color: inherit;
+  top: -8px;
+  left: 20px;
+}
 header {
   width: 100%;
   height: 80px;
@@ -62,14 +70,11 @@ header {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: #fff;
-
-  &.on {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
+  // background-color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .header__inner {
   max-width: 1320px;
@@ -90,45 +95,23 @@ header {
     height: 100%;
   }
 }
-.nav {
-  width: 50%;
-  height: 100%;
 
-  .util_flex {
-    justify-content: center;
-    gap: 20px;
-    height: 100%;
-  }
-  &__item {
-    flex: 1;
-    height: 100%;
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-  }
-  &__link {
-    transition: all 0.2s;
-    &:hover {
-      color: rgb(167, 167, 167);
-    }
-    &.active {
-      color: rgb(167, 167, 167);
-    }
-  }
-}
 .section {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  &.fp-section.active {
+    .section__title {
+      &::before {
+        animation: highlight 0.8s forwards ease-in-out;
+      }
+    }
+  }
+
   &__inner {
     max-width: 1320px;
     width: 100%;
+    height: 100%;
     padding-inline: 3.125%;
+    padding-top: 15vh;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -153,11 +136,6 @@ header {
       z-index: -1;
       transition: width ease-in-out;
     }
-    &.aos-animate {
-      &::before {
-        animation: highlight 0.8s forwards ease-in-out;
-      }
-    }
   }
   &__desc {
     font-size: 1.125rem;
@@ -181,12 +159,45 @@ header {
   background-size: 300% 300%;
   position: relative;
   z-index: 1;
-  .section__desc {
-    font-size: 20px;
+  .section__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .kv-title {
+    font-size: 3.125rem;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+    display: inline-block;
+    margin-bottom: 4.6875%;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .kv-desc {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    & + .kv-desc {
+      margin-top: 14px;
+    }
   }
 }
 /* about */
 .section--about {
+  &.fp-section.active {
+    .section__img {
+      > img {
+        filter: blur(0);
+      }
+    }
+    .intro-point {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
   .util_flex {
     gap: 18%;
   }
@@ -196,11 +207,6 @@ header {
     > img {
       filter: blur(4px);
       transition: all 1s cubic-bezier(0, 0, 0.8, 1) 0.5s;
-    }
-    &.aos-animate {
-      > img {
-        filter: blur(0);
-      }
     }
   }
   .text-wrap {
@@ -244,11 +250,6 @@ header {
       bottom: 0;
       z-index: -1;
       transition: width 0.8s ease-in-out;
-    }
-    &.aos-animate {
-      &::before {
-        width: 100%;
-      }
     }
   }
 }
@@ -353,6 +354,9 @@ header {
   &__box {
     display: none;
     padding: 4.16%;
+    // &:nth-child(2) {
+    //   padding-inline: 8.33%;
+    // }
     &:not(.tab-content__box--side) {
       padding-bottom: 5%;
     }
@@ -450,7 +454,7 @@ header {
   }
 }
 .hover-box {
-  padding: 3.5rem;
+  padding: 2.5rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -461,13 +465,13 @@ header {
   border-radius: 2rem 2rem 0 0;
 
   &__title {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     line-height: 1.2;
     color: #fff;
-    margin-bottom: 56px;
+    margin-bottom: 2.5rem;
   }
   &__desc {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.2;
     color: #fff;
     & + .hover-box__desc {
@@ -503,9 +507,13 @@ header {
   }
 }
 /* swiper */
-.experienceSwiper,
-.projectSwiper {
+.experienceSwiper {
   width: 100%;
+  position: relative;
+}
+.projectSwiper {
+  width: 70%;
+  margin-inline: auto;
   position: relative;
 }
 .swiper-slide {

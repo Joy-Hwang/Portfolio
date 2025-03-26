@@ -56,6 +56,16 @@ img {
   display: grid;
 }
 
+#fp-nav ul li .fp-tooltip {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  color: inherit;
+  top: -8px;
+  left: 20px;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -64,9 +74,6 @@ header {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: #fff;
-}
-header.on {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -94,46 +101,18 @@ header.on {
   height: 100%;
 }
 
-.nav {
-  width: 50%;
-  height: 100%;
-}
-.nav .util_flex {
-  justify-content: center;
-  gap: 20px;
-  height: 100%;
-}
-.nav__item {
-  flex: 1;
-  height: 100%;
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-}
-.nav__link {
-  transition: all 0.2s;
-}
-.nav__link:hover {
-  color: rgb(167, 167, 167);
-}
-.nav__link.active {
-  color: rgb(167, 167, 167);
-}
-
 .section {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+.section.fp-section.active .section__title::before {
+  animation: highlight 0.8s forwards ease-in-out;
 }
 .section__inner {
   max-width: 1320px;
   width: 100%;
+  height: 100%;
   padding-inline: 3.125%;
+  padding-top: 15vh;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -158,9 +137,6 @@ header.on {
   z-index: -1;
   transition: width ease-in-out;
 }
-.section__title.aos-animate::before {
-  animation: highlight 0.8s forwards ease-in-out;
-}
 .section__desc {
   font-size: 1.125rem;
   line-height: 1.5;
@@ -178,11 +154,38 @@ header.on {
   position: relative;
   z-index: 1;
 }
-.section--kv .section__desc {
-  font-size: 20px;
+.section--kv .section__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section--kv .kv-title {
+  font-size: 3.125rem;
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  display: inline-block;
+  margin-bottom: 4.6875%;
+  position: relative;
+  text-transform: uppercase;
+}
+.section--kv .kv-desc {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.section--kv .kv-desc + .kv-desc {
+  margin-top: 14px;
 }
 
 /* about */
+.section--about.fp-section.active .section__img > img {
+  filter: blur(0);
+}
+.section--about.fp-section.active .intro-point::before {
+  width: 100%;
+}
 .section--about .util_flex {
   gap: 18%;
 }
@@ -193,9 +196,6 @@ header.on {
 .section--about .section__img > img {
   filter: blur(4px);
   transition: all 1s cubic-bezier(0, 0, 0.8, 1) 0.5s;
-}
-.section--about .section__img.aos-animate > img {
-  filter: blur(0);
 }
 .section--about .text-wrap {
   flex: 1;
@@ -235,9 +235,6 @@ header.on {
   bottom: 0;
   z-index: -1;
   transition: width 0.8s ease-in-out;
-}
-.section--about .intro-point.aos-animate::before {
-  width: 100%;
 }
 
 /* skills */
@@ -430,7 +427,7 @@ header.on {
 }
 
 .hover-box {
-  padding: 3.5rem;
+  padding: 2.5rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -441,13 +438,13 @@ header.on {
   border-radius: 2rem 2rem 0 0;
 }
 .hover-box__title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   line-height: 1.2;
   color: #fff;
-  margin-bottom: 56px;
+  margin-bottom: 2.5rem;
 }
 .hover-box__desc {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.2;
   color: #fff;
 }
@@ -483,9 +480,14 @@ header.on {
 }
 
 /* swiper */
-.experienceSwiper,
-.projectSwiper {
+.experienceSwiper {
   width: 100%;
+  position: relative;
+}
+
+.projectSwiper {
+  width: 70%;
+  margin-inline: auto;
   position: relative;
 }
 
