@@ -81,7 +81,7 @@ function initSwiper() {
       clickable: true,
     },
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 30,
   });
   new Swiper(".projectSwiper", {
     pagination: {

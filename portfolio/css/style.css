@@ -980,6 +980,7 @@ header {
   }
   .section--contact .contact-info {
     width: 50%;
+    gap: 10px;
   }
   .section--contact .contact-info__item {
     font-size: 0.875rem;
