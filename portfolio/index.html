@@ -32,14 +32,17 @@
           <div class="section__inner">
             <p class="kv-title">Welcome to my portfolio</p>
             <p class="kv-desc">
-              Hello, I’m Joy Hwang, a UI developer with 4 years of experience.
+              I’m Joy Hwang, a UI developer with 4 years of experience.
               <br />
             </p>
             <p class="kv-desc">
-              I joyfully collaborate with teams to create user-friendly and
-              engaging web experiences.<br />
+              I joyfully collaborate with teams to create user-friendly
+              <br class="mo-only" />
+              and engaging web experiences.<br />
               With a deep understanding of user needs, <br />
-              I design and develop intuitive interfaces that are both
+              I design and develop intuitive interfaces that are both<br
+                class="mo-only"
+              />
               aesthetically pleasing and highly functional.
             </p>
           </div>
@@ -56,9 +59,18 @@
                 <div class="content content--intro">
                   <h3 class="content__title">Introduction</h3>
                   <br />
-                  <p class="section__desc intro-point">
+                  <p class="section__desc intro-point pc-only">
                     I am a passionate and detail-oriented UI developer.
                   </p>
+                  <div class="responsive-box">
+                    <p class="section__desc intro-point">
+                      I am a passionate and
+                    </p>
+                    <br />
+                    <p class="section__desc intro-point">
+                      detail-oriented UI developer.
+                    </p>
+                  </div>
                   <p class="section__desc">
                     I have been working at a web agency in South Korea for over
                     four years,<br class="pc-only" />
@@ -247,13 +259,19 @@
             <div class="tab">
               <ul class="tab-nav">
                 <li class="tab-nav__item active" data-tab="tab1">
-                  <h3 class="tab-nav__title">WORK EXPERIENCES</h3>
+                  <h3 class="tab-nav__title">
+                    WORK <br class="mo-only" />
+                    EXPERIENCES
+                  </h3>
                 </li>
                 <li class="tab-nav__item" data-tab="tab2">
                   <h3 class="tab-nav__title">PROJECTS</h3>
                 </li>
                 <li class="tab-nav__item" data-tab="tab3">
-                  <h3 class="tab-nav__title">SIDE PROJECTS</h3>
+                  <h3 class="tab-nav__title">
+                    SIDE <br class="mo-only" />
+                    PROJECTS
+                  </h3>
                 </li>
               </ul>
               <div class="tab-content">
@@ -262,15 +280,17 @@
                   class="tab-content__box tab-content__box--experience active"
                 >
                   <div class="experienceSwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="experience-info">
-                          <p class="experience-title">
-                            CTTD<span class="experience-title-point"
+                    <div class="experience swiper-wrapper">
+                      <div class="experience__item swiper-slide">
+                        <div class="experience__info">
+                          <p class="experience__title">
+                            CTTD<span class="experience__title-point"
                               >Amorepacific Team</span
                             >
                           </p>
-                          <p class="experience-date">2022.03.02 ~ 2024.03.31</p>
+                          <p class="experience__date">
+                            2022.03.02 ~ 2024.03.31
+                          </p>
                         </div>
                         <ul class="experience-detail">
                           <li class="experience-detail__item">
@@ -319,14 +339,16 @@
                         </ul>
                       </div>
 
-                      <div class="swiper-slide">
-                        <div class="experience-info">
-                          <p class="experience-title">
-                            CTTD<span class="experience-title-point"
+                      <div class="experience__item swiper-slide">
+                        <div class="experience__info">
+                          <p class="experience__title">
+                            CTTD<span class="experience__title-point"
                               >PTK Team</span
                             >
                           </p>
-                          <p class="experience-date">2024.04.01 ~ 2025.07.30</p>
+                          <p class="experience__date">
+                            2024.04.01 ~ 2025.07.30
+                          </p>
                         </div>
                         <ul class="experience-detail">
                           <li class="experience-detail__item">
@@ -386,10 +408,16 @@
                           class="project__link"
                         >
                           <div class="project__thumb">
-                            <img
-                              src="./img/project01.png"
-                              alt="Laneige Meets Art Page"
-                            />
+                            <picture>
+                              <source
+                                media="(max-width: 700px)"
+                                srcset="./img/project01_mo.png"
+                              />
+                              <img
+                                src="./img/project01.png"
+                                alt="Laneige Meets Art Page"
+                              />
+                            </picture>
                           </div>
                           <div class="hover-box">
                             <h4 class="hover-box__title">Laneige Meets Art</h4>
@@ -413,10 +441,16 @@
                           class="project__link"
                         >
                           <div class="project__thumb">
-                            <img
-                              src="./img/project02.png"
-                              alt="Sulwhasoo Gift Page"
-                            />
+                            <picture>
+                              <source
+                                media="(max-width: 700px)"
+                                srcset="./img/project02_mo.png"
+                              />
+                              <img
+                                src="./img/project02.png"
+                                alt="Sulwhasoo Gift Page"
+                              />
+                            </picture>
                           </div>
 
                           <div class="hover-box">
@@ -441,10 +475,16 @@
                           class="project__link"
                         >
                           <div class="project__thumb">
-                            <img
-                              src="./img/project03.png"
-                              alt="Hera Rouge Classy Story Page"
-                            />
+                            <picture>
+                              <source
+                                media="(max-width: 700px)"
+                                srcset="./img/project03_mo.png"
+                              />
+                              <img
+                                src="./img/project03.png"
+                                alt="Hera Rouge Classy Story Page"
+                              />
+                            </picture>
                           </div>
                           <div class="hover-box">
                             <h4 class="hover-box__title">Hera Rouge Classy</h4>
@@ -468,10 +508,16 @@
                           class="project__link"
                         >
                           <div class="project__thumb">
-                            <img
-                              src="./img/project04.png"
-                              alt="Samsung Galaxy Campus Event Page"
-                            />
+                            <picture>
+                              <source
+                                media="(max-width: 700px)"
+                                srcset="./img/project04_mo.png"
+                              />
+                              <img
+                                src="./img/project04.png"
+                                alt="Samsung Galaxy Campus Event Page"
+                              />
+                            </picture>
                           </div>
                           <div class="hover-box">
                             <h4 class="hover-box__title">
@@ -497,10 +543,16 @@
                           class="project__link"
                         >
                           <div class="project__thumb">
-                            <img
-                              src="./img/project05.png"
-                              alt="Shinsegae International Homepage"
-                            />
+                            <picture>
+                              <source
+                                media="(max-width: 700px)"
+                                srcset="./img/project05_mo.png"
+                              />
+                              <img
+                                src="./img/project05.png"
+                                alt="Shinsegae International Homepage"
+                              />
+                            </picture>
                           </div>
                           <div class="hover-box">
                             <h4 class="hover-box__title">

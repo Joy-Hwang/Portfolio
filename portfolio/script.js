@@ -11,7 +11,7 @@ function modiFullpage() {
     navigationPosition: "right",
     navigationTooltips: ["HOME", "ABOUT", "SKILLS", "WORKS", "CONTACT"],
     // touchSensitivity: 15, // 터치 민감도 조정 (0~100)
-    responsiveWidth: 500, // 특정 너비 이상에서만 fullpage.js 사용
+    responsiveWidth: 701, // 특정 너비 이상에서만 fullpage.js 사용
     // responsiveHeight: 700, // 특정 높이 이상에서만 fullpage.js 사용
     afterRender: function () {
       $(".logo a").on("click", function (e) {
@@ -81,6 +81,7 @@ function initSwiper() {
       clickable: true,
     },
     slidesPerView: 1,
+    spaceBetween: 20,
   });
   new Swiper(".projectSwiper", {
     pagination: {
